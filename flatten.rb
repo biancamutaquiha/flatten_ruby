@@ -1,4 +1,6 @@
 def flatten(array)
+  return 'input must be array' unless array.instance_of?(Array)
+  
   new_array = []
   array.each do |item|
     new_array << item
