@@ -1,9 +1,12 @@
 def flatten(array)
   return 'input must be array' unless array.instance_of?(Array)
 
-  new_array = []
-  array.each do |item|
-    new_array << item
+  new_array = array.reduce([]) do |accumulator, item|
+    if item.instance_of?(Array)
+      accumulator = accumulator.concat(flatten(item)) 
+    else
+      accumulator << item
+    end 
   end
   new_array
 end
