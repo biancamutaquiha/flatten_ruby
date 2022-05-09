@@ -14,4 +14,9 @@ def empty_array?
   assert_equal([], flatten([]))
 end
 
+def flatten_array?
+    assert_equal([1,2,3], flatten([1,2,3]))
+end
+
 empty_array?
+flatten_array?
