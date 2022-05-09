@@ -8,4 +8,5 @@ Write an algorithm to flatten an arbitrarily nested array of values.
 
 empty_array?
 flatten_array?
+not_array_input?
 nested_array?
