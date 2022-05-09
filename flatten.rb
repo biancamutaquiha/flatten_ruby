@@ -1,6 +1,6 @@
 def flatten(array)
   return 'input must be array' unless array.instance_of?(Array)
-  
+
   new_array = []
   array.each do |item|
     new_array << item
@@ -27,6 +27,11 @@ def not_array_input?
   assert_equal('input must be array', flatten(1))
 end
 
+def nested_array?
+  assert_equal([1, 2, 3, 4], flatten([ 1, [ 2, [ 3 ] ], 4 ]))
+end
+
 empty_array?
 flatten_array?
 not_array_input?
+nested_array?
